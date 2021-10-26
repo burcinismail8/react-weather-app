@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,200;1,300;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+  background-image: url('./assets/cold-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
+}
+
+.app.warm {
+  background-image: url('./assets/warm-bg.jpg');
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+  padding: 25px;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.search-box .search-bar {
+  width: 100%;
+  display: block;
+  padding: 15px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: rgb(53, 52, 52);
+  border-radius: 14px;
+  transition: 0.4s ease;
+  box-shadow: 0 0 2px gray;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+
+}
+
+.location-box .location {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5)
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: white;
+  font-size: 102px;
+  font-weight: 900;
+  text-shadow: 3px 6px rgb(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgb(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  .app {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  body {
+    width: 30%;
+    margin: 0 auto;
+    background: rgb(169, 205, 249);
+    background: linear-gradient(100deg, rgba(169, 205, 249, 1) 15%, rgba(224, 157, 196, 1) 80%);
+  }
+
+  #root {
+    width: 100%;
+  }
+
+  main {
+    min-height: 90vh;
+    margin-top: 35px;
+    border-radius: 25px;
+  }
+
+
+
+  .app {
+    border-radius: 25px;
+  }
+}
